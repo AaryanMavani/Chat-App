@@ -1,10 +1,12 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useAuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function useSignup() {
   const [loading, setLoading] = useState(false);
   const { setAuthUser } = useAuthContext();
+  const navigate = useNavigate();
 
   const signup = async ({
     fullName,
@@ -37,8 +39,9 @@ function useSignup() {
       });
 
       const data = await res.json();
-      console.log(data);
-
+      console.log("before");
+      navigate("/login");
+      console.log("after");
       if (data.error) {
         throw new Error(data.error);
       }
