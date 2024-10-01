@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 body {
-  background: url("/bg.png");
-  /* background: url("/winter-christmas-desktop-mqyrloy30qynm2n3.jpg"); */
+  /* background: url("/bg3.jpg"); */
+  background: url("/bg6.jpg");
+  /* background: url("/bg7.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
